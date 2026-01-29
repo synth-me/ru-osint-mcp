@@ -8,7 +8,7 @@ import sys
 mcp = FastMCP(
     name="RusMilMcp"
 )
-mcp.add_middleware(Authentication.SQLiteAuthMiddleware())
+#mcp.add_middleware(Authentication.SQLiteAuthMiddleware())
 
 airbases = AB.AB_Explorer()
 ground_forces = GF.GF_Explorer()
