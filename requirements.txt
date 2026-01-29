@@ -1,0 +1,18 @@
+# MCP Framework
+fastmcp
+mcp
+
+# Data Processing & Parsing
+beautifulsoup4
+pandas
+lxml
+
+# Networking & API Interaction
+requests
+wikipedia-api
+
+# Geospatial & Logic
+geopy
+
+# Environment & Utilities
+python-dotenv
