@@ -1,4 +1,4 @@
-from modules import AB, GF, Depot, POI, GeoTools, Oblast, InspectionTools,Authentication, Metadata
+from modules import AB, GF, Depot, POI, GeoTools, Oblast, InspectionTools, Metadata
 from fastmcp import FastMCP
 from mcp.types import Icon
 from typing import Optional
@@ -8,7 +8,6 @@ import sys
 mcp = FastMCP(
     name="RusMilMcp"
 )
-#mcp.add_middleware(Authentication.SQLiteAuthMiddleware())
 
 airbases = AB.AB_Explorer()
 ground_forces = GF.GF_Explorer()
