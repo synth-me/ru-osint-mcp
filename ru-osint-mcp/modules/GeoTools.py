@@ -5,12 +5,48 @@ from geopy.geocoders import Nominatim
 from geopy.exc import GeocoderTimedOut
 from mcp.types import Icon
 import logging
+import os 
 
-logging.basicConfig(
-    filename="../logs/server-log.log",
-    level=logging.INFO,
-    format="%(asctime)s — %(levelname)s — %(message)s"
-)
+from pathlib import Path
+
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+
+def running_in_prefect() -> bool:
+    return any(
+        key in os.environ
+        for key in (
+            "PREFECT_FLOW_RUN_ID",
+            "PREFECT_API_URL",
+            "PREFECT__API__URL",
+        )
+    )
+
+
+def setup_logging():
+    root_logger = logging.getLogger()
+    root_logger.setLevel(logging.INFO)
+
+    # Clear existing handlers (important for reloads / MCP servers)
+    root_logger.handlers.clear()
+
+    formatter = logging.Formatter(
+        "%(asctime)s — %(levelname)s — %(name)s — %(message)s"
+    )
+
+    if running_in_prefect():
+        # ✅ Horizon / Prefect → stdout
+        handler = logging.StreamHandler()
+    else:
+        # ✅ Local dev → file
+        log_dir = Path("../logs")
+        log_dir.mkdir(parents=True, exist_ok=True)
+        handler = logging.FileHandler(log_dir / "server-log.log")
+
+    handler.setFormatter(formatter)
+    root_logger.addHandler(handler)
+
+
+setup_logging()
 
 logger = logging.getLogger(__name__)
 
