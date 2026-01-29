@@ -25,9 +25,13 @@ logger = logging.getLogger(__name__)
 # ------- prompts -------------
 
 @mcp.prompt 
-def react_map():
+def react_map(name: str):
     """
         This prompt allows you to render a map using coordinates
+
+        Args:
+            name (str): this is map name that must be used to render the report 
+
     """
     with open("./additional-information/react-template-map.jsx","r",encoding="utf-8") as react_template_file:
         react_template_content = react_template_file.read()
