@@ -135,7 +135,6 @@ Query the comprehensive airfields database covering military, civil, and reserve
 
 **Example Use Cases:**
 - "Find all active military air bases in Kaliningrad Oblast"
-- "Search for airfields with Su-35 aircraft"
 - "List helicopter bases in Belarus"
 - "Show former military airfields in Western Russia"
 
