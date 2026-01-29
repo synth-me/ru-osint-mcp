@@ -30,6 +30,15 @@ extract data easily from public available sources. Also, in the future, other re
 this mcp server will help integrate it with other data sources that an LLM may have access to, helping open source researchers
 to improve their investigation capabilities.  
 
+I recommend using a powerful model (Claude, Mistral, ChatGPT all the free services available) because there are many tools and this will easily consume the context window of smaller models. but if you do not have a powerfull PC and want to run it locally i would recommend using:
+* Qwen3:7b
+* Granite4:Tiny
+
+For more specific tools that closed source models may refuse to do (because we are dealing with military related information) i recommend using: 
+
+* Cogito:8b
+* Hermes3:8b
+
 ## Tools 
 
 ### Auxiliary Tools
