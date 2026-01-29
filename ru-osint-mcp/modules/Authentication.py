@@ -29,9 +29,10 @@ class SQLiteAuthMiddleware(Middleware):
     async def on_call_tool(self, context: MiddlewareContext, call_next):
         headers = get_http_headers()
         
-        token = headers.get("authorization") if headers else os.getenv("TOKEN")
+        token = headers.get("Authorization") if headers else os.getenv("TOKEN")
 
         if not self.verify_token(token):
             raise ToolError("Unauthorized: Invalid or missing secure token.")
+
 
         return await call_next(context)
