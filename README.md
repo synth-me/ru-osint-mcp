@@ -1,4 +1,4 @@
-# Russian Military Assets OSINT MCP
+# 🇷🇺 🔍 Russian Military Assets OSINT MCP
 
 <img alt="logo" width="300" height="300" src="https://github.com/synth-me/ru-osint-mcp/blob/main/ru-osint-mcp/icons/server-logo.png"></img>
 
