@@ -6,19 +6,7 @@ import logging
 import sys
 
 mcp = FastMCP(
-    name="RusMilMcp",
-    icons=[
-        Icon(
-            src="./icons/server-logo.png",
-            mimeType="image/png",
-            sizes=["48x48"]
-        ),
-        Icon(
-            src="./icons/server-logo.png",
-            mimeType="image/png",
-            sizes=["96x96"]
-        ),
-    ]
+    name="RusMilMcp"
 )
 mcp.add_middleware(Authentication.SQLiteAuthMiddleware())
 
