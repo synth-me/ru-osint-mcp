@@ -2,6 +2,24 @@
 
 <img alt="logo" width="300" height="300" src="https://github.com/synth-me/ru-osint-mcp/blob/main/ru-osint-mcp/icons/server-logo.png"></img>
 
+# TL:DR 
+
+Use it running locally using: 
+
+```json
+{
+  "mcp servers":{
+      "RusMil-MCP":{
+        "command":"python",
+        "args":[
+          "your/path/here/rus-osint-mcp/main.py",
+          "stdio"
+        ]
+      }
+   }
+}
+```
+
 # Summary
 
 - [Russian Military Assets OSINT MCP](#russian-military-assets-osint-mcp)
